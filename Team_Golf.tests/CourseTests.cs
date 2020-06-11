@@ -8,14 +8,5 @@ namespace Team_Golf.tests
 {
     public class CourseTests
     {
-        [Fact]
-        public void Index_Returns_View()
-        {
-            var underTest = new CourseController();
-
-            var result = underTest.Index();
-
-            Assert.IsType<ViewResult>(result);
-        }
     }
 }
