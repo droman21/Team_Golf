@@ -17,9 +17,15 @@
     <p>golf is fun</p>
     @foreach (var golfCourse in Model)
     {
-        <p>golf course title <span>@golfCourse.Name</span></p>
-        <p>golf course id <span>@golfCourse.Id</span></p>
-        <p>golf course review <span>@golfCourse.Review</span></p>
+
+        <div id="Review Section">
+            <article>
+                <h3>@golfCourse.Name</h3>
+                <img src="" alt="image# @golfCourse.Id"/>
+                <p>@golfCourse.Review</p>
+            </article>
+        </div>
     }
+
 </body>
 </html>
