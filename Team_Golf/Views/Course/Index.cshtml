@@ -1,5 +1,5 @@
 ﻿
-@model Team_Golf.Models.GolfCourse
+@model IEnumerable<Team_Golf.Models.GolfCourse>
 @{
     Layout = null;
 }
@@ -10,12 +10,16 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Golf Courses</title>
+    <link href="~/HomeStyle.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Hello Golf Course</h1>
     <p>golf is fun</p>
-    <div>Course Name: @Model.Name</div>
-    <div>Course ID: @Model.Id</div>
-    <div>Course Review: @Model.Review</div>
+    @foreach (var golfCourse in Model)
+    {
+        <p>golf course title <span>@golfCourse.Name</span></p>
+        <p>golf course id <span>@golfCourse.Id</span></p>
+        <p>golf course review <span>@golfCourse.Review</span></p>
+    }
 </body>
 </html>
