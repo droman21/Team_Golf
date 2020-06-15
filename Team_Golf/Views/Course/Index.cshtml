@@ -1,0 +1,31 @@
+﻿
+@model IEnumerable<Team_Golf.Models.GolfCourse>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Golf Courses</title>
+    <link href="~/HomeStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Hello Golf Course</h1>
+    <p>golf is fun</p>
+    @foreach (var golfCourse in Model)
+    {
+
+        <div id="Review Section">
+            <article>
+                <h3>@golfCourse.Name</h3>
+                <img src="" alt="image# @golfCourse.Id"/>
+                <p>@golfCourse.Review</p>
+            </article>
+        </div>
+    }
+
+</body>
+</html>
