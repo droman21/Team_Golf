@@ -1,0 +1,20 @@
+﻿@model Team_Golf.Models.GolfCourse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h1> Golf Course Details</h1>
+    <p> Golf Course Name: <span>@Model.Name</span></p>
+    <p> Golf Course Review:<span>@Model.Review</span></p>
+    <hr />
+    <a href="/Course/Index">Return to All Golf Courses Page</a>
+</body>
+</html>
