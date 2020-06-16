@@ -14,9 +14,9 @@ namespace Team_Golf.Repositories
         {
             golfCoursesList = new List<GolfCourse>()
             {
-                new GolfCourse("Bushwood CC", 1, "Good snack shack and poor caddying"),
-                new GolfCourse("Fury Creek Golf CC", 2, "Price is wrong B&$#%"),
-                new GolfCourse("Cotton Wood", 3, "Waggle and let the big dog eat")
+                new GolfCourse("Bushwood CC", 1, "Good snack shack and poor caddying","Bushwood.jpg"),
+                new GolfCourse("Fury Creek Golf CC", 2, "Price is wrong B&$#%","FurryCreek.jpg"),
+                new GolfCourse("Cotton Wood", 3, "Waggle and let the big dog eat","Cottonwood.jpg")
             };
         }
 

@@ -10,17 +10,19 @@ namespace Team_Golf.Models
         public string Name { get; set; }
         public int Id { get; set; }
         public string Review { get; set; }
+        public string Image { get; set; }
 
         public GolfCourse()
         {
 
         }
 
-        public GolfCourse(string name, int id, string review)
+        public GolfCourse(string name, int id, string review, string image)
         {
             Name = name;
             Id = id;
             Review = review;
+            Image = image;
         }
         
     }

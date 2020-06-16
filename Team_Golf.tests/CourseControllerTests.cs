@@ -11,10 +11,10 @@ namespace Team_Golf.tests
     public class CourseControllerTests
     {
         CourseController underTest;
-        public CourseControllerTests()
-        {
-            underTest = new CourseController();
-        }
+        //public CourseControllerTests()
+        //{
+        //    underTest = new CourseController();
+        //}
         [Fact]
         public void Index_Returns_View()
         {
