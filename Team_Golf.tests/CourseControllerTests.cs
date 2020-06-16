@@ -28,8 +28,7 @@ namespace Team_Golf.tests
         public void Index_Passes_Model_to_View()
         {
             var result = underTest.Index();
-
-            Assert.IsType<GolfCourse>(result.Model);
+            Assert.IsType<List<GolfCourse>>(result.Model);
         }
     }
 

@@ -6,7 +6,7 @@ using Team_Golf.Models;
 
 namespace Team_Golf.Repositories
 {
-    public class GolfCourseRepository
+    public class GolfCourseRepository : IRepository<GolfCourse>
     {
         public List<GolfCourse> golfCoursesList;
 
