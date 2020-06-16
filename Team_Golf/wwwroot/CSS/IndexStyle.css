@@ -1,0 +1,23 @@
+﻿body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    background-image: url(Images/golfcourse1.jpg);
+    background-size: cover;
+        
+}
+
+#Review_Section article{
+    display: grid;
+    color: red;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+
+
+
+}
+
+
+
+
+

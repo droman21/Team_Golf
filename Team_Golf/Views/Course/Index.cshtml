@@ -10,7 +10,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Golf Courses</title>
-    <link href="~/HomeStyle.css" rel="stylesheet" />
+    <link href="~/CSS/IndexStyle.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Hello Golf Course</h1>
@@ -18,10 +18,10 @@
     @foreach (var golfCourse in Model)
     {
 
-        <div id="Review Section">
+        <div id="Review_Section">
             <article class="someName">
                 <h3><a href="/Course/Details/@golfCourse.Id">@golfCourse.Name</a></h3>
-                <img src="" alt="image# @golfCourse.Id"/>
+                <img src="~/images/bushwood.jpg" alt="image# @golfCourse.Id"/>
                 <p>@golfCourse.Review</p>
             </article>
         </div>
