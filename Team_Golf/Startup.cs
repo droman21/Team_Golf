@@ -26,6 +26,7 @@ namespace Team_Golf
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<GolfCourseContext>();
             services.AddScoped<IRepository<GolfCourse>,GolfCourseRepository>();
         }
 

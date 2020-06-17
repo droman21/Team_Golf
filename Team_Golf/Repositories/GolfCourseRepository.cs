@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Team_Golf.Models;
 //using Microsoft.EntityFrameworkCore;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.EntityFrameworkCore;
 
 namespace Team_Golf.Repositories
 {
@@ -27,12 +28,23 @@ namespace Team_Golf.Repositories
 
         public IEnumerable<GolfCourse> GetAll()
         {
-            return db.GolfCourse;
+            return db.GolfCourses;
         }
 
         public GolfCourse GetById(int id)
         {
-            return golfCoursesList.Single(c => c.Id == id);
+            return db.GolfCourses.Single(c => c.Id == id);
+        }
+
+        public int Count()
+        {
+            return db.GolfCourses.Count();
+        }
+
+        public void Create(GolfCourse golfcourse)
+        {
+            db.GolfCourses.Add(golfcourse);
+            db.SaveChanges();
         }
         
         
