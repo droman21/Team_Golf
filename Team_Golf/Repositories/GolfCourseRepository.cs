@@ -3,31 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Team_Golf.Models;
+//using Microsoft.EntityFrameworkCore;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Team_Golf.Repositories
 {
     public class GolfCourseRepository : IRepository<GolfCourse>
     {
-        public List<GolfCourse> golfCoursesList;
-
-        public GolfCourseRepository()
+        //public List<GolfCourse> golfCoursesList;
+        private GolfCourseContext db;
+        public GolfCourseRepository(GolfCourseContext db)
         {
-            golfCoursesList = new List<GolfCourse>()
-            {
-                new GolfCourse("Bushwood CC", 1, "Good snack shack and poor caddying","Bushwood.jpg"),
-                new GolfCourse("Fury Creek Golf CC", 2, "Price is wrong B&$#%","FurryCreek.jpg"),
-                new GolfCourse("Cotton Wood", 3, "Waggle and let the big dog eat","Cottonwood.jpg")
-            };
+            this.db = db;
         }
+
+        //public GolfCourseRepository()
+        //{
+        //    golfCoursesList = new List<GolfCourse>()
+        //    {
+        //        
+        //    };
+        //}
 
         public IEnumerable<GolfCourse> GetAll()
         {
-            return golfCoursesList;
+            return db.GolfCourse;
         }
 
         public GolfCourse GetById(int id)
         {
             return golfCoursesList.Single(c => c.Id == id);
         }
+        
+        
     }
 }
