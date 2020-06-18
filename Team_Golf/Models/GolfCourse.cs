@@ -12,6 +12,7 @@ namespace Team_Golf.Models
         public int Id { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
+        public string CourseType { get; set; }
 
         public virtual ICollection<Review> Reviews { get; set; }
 
@@ -20,12 +21,14 @@ namespace Team_Golf.Models
 
         }
 
-        public GolfCourse(string name, int id, string description, string image)
+        public GolfCourse(string name, int id, string description, string image, string courseType)
         {
             Name = name;
             Id = id;
             Description = description;
             Image = image;
+            CourseType = courseType;
+
         }
     }
 
