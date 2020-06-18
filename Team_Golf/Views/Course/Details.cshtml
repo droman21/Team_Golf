@@ -14,6 +14,10 @@
     <h1> Golf Course Details</h1>
     <p> Golf Course Name: <span>@Model.Name</span></p>
     <p> Golf Course Review:<span>@Model.Description</span></p>
+    @foreach (var review in Model.Reviews)
+    {
+        <p>Review: <span>@review.ReviewText</span></p>
+    }
     <hr />
     <a href="/Course/Index">Return to All Golf Courses Page</a>
     <a href="/Review/Index">See All Reviews</a>
