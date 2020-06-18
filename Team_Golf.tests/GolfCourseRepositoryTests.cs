@@ -22,17 +22,18 @@ namespace Team_Golf.tests
             db.Database.RollbackTransaction();
         }
         [Fact]
-        public void Count_Starts_At_Zero()
+        public void Count_Starts_At_Three()
         {
             var count = underTest.Count();
-            Assert.Equal(0, count);
+            Assert.Equal(3, count);
         }
         [Fact]
-        public void Create_Increases_Count()
+        public void Create_Increases_Count_By_1()
         {
+            var currCount = underTest.Count();
             underTest.Create(new GolfCourse() { Name = "name" });
             var count = underTest.Count();
-            Assert.Equal(1, count);
+            Assert.Equal(currCount + 1, count);
         }
 
 

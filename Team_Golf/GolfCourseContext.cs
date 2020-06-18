@@ -27,7 +27,8 @@ namespace Team_Golf
                 
                new GolfCourse("Bushwood CC", 1, "Good snack shack and poor caddying","Bushwood.jpg"),
                new GolfCourse("Fury Creek Golf CC", 2, "Price is wrong B&$#%","FurryCreek.jpg"),
-               new GolfCourse("Cotton Wood", 3, "Waggle and let the big dog eat","Cottonwood.jpg")
+               new GolfCourse("Cotton Wood", 3, "Waggle and let the big dog eat","Cottonwood.jpg"),
+               new GolfCourse("Little Met",4,"Great course for beginners, not so much for the advanced player","golfcouse5.jpg")
                );
         }
     }
