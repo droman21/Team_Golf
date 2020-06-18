@@ -11,6 +11,7 @@ namespace Team_Golf
     public class GolfCourseContext : DbContext
     {
         public DbSet<GolfCourse> GolfCourses { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,6 +31,15 @@ namespace Team_Golf
                new GolfCourse("Cotton Wood", 3, "Waggle and let the big dog eat","Cottonwood.jpg"),
                new GolfCourse("Little Met",4,"Great course for beginners, not so much for the advanced player","golfcouse5.jpg")
                );
+
+            modelbuilder.Entity<Review>().HasData(
+
+               new Review("Ron", 1, "I played bad. This course sucks.", "06-18-2020", 1, 1),
+               new Review("Dan", 2, "I played bad. This course sucks.", "06-18-2020", 2, 1),
+               new Review("Chuck", 3, "I played bad. This course sucks.", "06-18-2020", 3, 2),
+               new Review("Dan", 4, "I played bad. This course sucks.", "06-18-2020", 4, 1)
+               );
+
         }
     }
 }

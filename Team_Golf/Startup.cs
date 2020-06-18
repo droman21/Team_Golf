@@ -28,6 +28,9 @@ namespace Team_Golf
             services.AddMvc();
             services.AddDbContext<GolfCourseContext>();
             services.AddScoped<IRepository<GolfCourse>,GolfCourseRepository>();
+
+//            services.AddDbContext<GolfCourseContext>();
+            services.AddScoped<IRepository<Review>, ReviewRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

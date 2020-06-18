@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace Team_Golf.Models
@@ -9,22 +10,23 @@ namespace Team_Golf.Models
     {
         public string Name { get; set; }
         public int Id { get; set; }
-        public string Review { get; set; }
+        public string Description { get; set; }
         public string Image { get; set; }
+
+        public virtual ICollection<Review> Reviews { get; set; }
 
         public GolfCourse()
         {
 
         }
 
-        public GolfCourse(string name, int id, string review, string image)
+        public GolfCourse(string name, int id, string description, string image)
         {
             Name = name;
             Id = id;
-            Review = review;
+            Description = description;
             Image = image;
         }
-        
     }
 
 }

@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Team_Golf;
 
 namespace Team_Golf.Migrations
 {
     [DbContext(typeof(GolfCourseContext))]
-    partial class GolfCourseContextModelSnapshot : ModelSnapshot
+    [Migration("20200618154449_CoursesAndReviews")]
+    partial class CoursesAndReviews
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
