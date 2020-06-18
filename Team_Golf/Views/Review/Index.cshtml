@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Team_Golf.Models.Review> 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>All Golf Course Reviews</h1>
+    @foreach (var review in Model)
+    {
+        <p>Reviewer Name: <span>@review.ReviewerName</span></p>
+        <p>Review Test: <span>@review.ReviewText</span></p>
+
+    }
+</body>
+</html>
