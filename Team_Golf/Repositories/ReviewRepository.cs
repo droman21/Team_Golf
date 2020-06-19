@@ -8,35 +8,34 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Team_Golf.Repositories
 {
-    public class GolfCourseRepository : IRepository<GolfCourse>
+    public class ReviewRepository : IRepository<Review>
     {
         private GolfCourseContext db;
-        public GolfCourseRepository(GolfCourseContext db)
+        public ReviewRepository(GolfCourseContext db)
         {
             this.db = db;
         }
 
-        public IEnumerable<GolfCourse> GetAll()
+        public IEnumerable<Review> GetAll()
         {
-            return db.GolfCourses;
+            return db.Reviews;
         }
 
-        public GolfCourse GetById(int id)
+        public Review GetById(int id)
         {
-            return db.GolfCourses.Single(c => c.Id == id);
+            return db.Reviews.Single(c => c.Id == id);
         }
 
         public int Count()
         {
-            return db.GolfCourses.Count();
+            return db.Reviews.Count();
         }
 
-        public void Create(GolfCourse golfcourse)
+        public void Create(Review review)
         {
-            db.GolfCourses.Add(golfcourse);
+            db.Reviews.Add(review);
             db.SaveChanges();
         }
-        
-        
+
     }
 }

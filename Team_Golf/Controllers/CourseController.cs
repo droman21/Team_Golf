@@ -10,10 +10,23 @@ namespace Team_Golf.Controllers
 {
     public class CourseController : Controller
     {
+        IRepository<GolfCourse> golfCourseRepo;
+
+        public CourseController(IRepository<GolfCourse> golfCourseRepo)
+        {
+            this.golfCourseRepo = golfCourseRepo;
+        }
+
         public ViewResult Index()
         {
-            GolfCourseRepository golfCourseRepo = new GolfCourseRepository();
+            //GolfCourseRepository golfCourseRepo = new GolfCourseRepository();
             var model = golfCourseRepo.GetAll();
+            return View(model);
+        }
+
+        public ViewResult Details(int id)
+        {
+            var model = golfCourseRepo.GetById(id);
             return View(model);
         }
     }

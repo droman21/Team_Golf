@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Team_Golf.Models;
+using Team_Golf.Repositories;
 
 namespace Team_Golf
 {
@@ -24,6 +26,11 @@ namespace Team_Golf
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<GolfCourseContext>();
+            services.AddScoped<IRepository<GolfCourse>,GolfCourseRepository>();
+
+//            services.AddDbContext<GolfCourseContext>();
+            services.AddScoped<IRepository<Review>, ReviewRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
