@@ -15,17 +15,15 @@
 <body>
     <h1>Hello Golf Course</h1>
     <p>golf is fun</p>
-    @foreach (var golfCourse in Model)
-    {
-
-        <div id="Review_Section">
-            <article class="someName">
-                <h3><a href="/Course/Details/@golfCourse.Id">@golfCourse.Name</a></h3>
-                <img src="~/Images/@golfCourse.Image" alt="image# @golfCourse.Id"/>
-                <p>@golfCourse.Description</p>
-            </article>
-        </div>
-    }
-
+    <div id="Review_Section">
+        @foreach (var golfCourse in Model)
+        {
+                <article class="someName">
+                    <h3><a href="/Course/Details/@golfCourse.Id">@golfCourse.Name</a></h3>
+                    <img src="~/Images/@golfCourse.Image" alt="image# @golfCourse.Id" />
+                    <p>@golfCourse.Description</p>
+                </article>
+        }
+    </div>
 </body>
 </html>

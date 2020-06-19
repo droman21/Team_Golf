@@ -6,16 +6,16 @@
         
 }
 
-#Review_Section article{
+#Review_Section {
     display: grid;
     color: red;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 1em;
 
-
-
 }
+
+
 
 
 
