@@ -17,11 +17,17 @@
         <article class="some_details_name">
             <h1> Golf Course Details</h1>
             <p> Golf Course Name: <span>@Model.Name</span></p>
-            <p> Golf Course Review:<span>@Model.Description</span></p>
-            <hr />
-            <a href="/Course/Index">Return to All Golf Courses Page</a>
+            <p> Golf Course Description:<span>@Model.Description</span></p>
+            <p> Golf Course Type: <span>@Model.CourseType</span></p>
+             @foreach (var review in Model.Reviews)
+              {
+                  <p>Review: <span>@review.ReviewText</span></p>
+                  <p>ReviewName: <span>@review.ReviewerName</span></p>
+              }
+              <hr />
+              <a href="/Course/Index">Return to All Golf Courses Page</a>
+              <a href="/Review/Index">See All Reviews</a>
         </article>
-        
     </div>
 </body>
 
