@@ -26,10 +26,12 @@ namespace Team_Golf
         {
             modelbuilder.Entity<GolfCourse>().HasData(
                 
+
                new GolfCourse("Bushwood CC", 1, "Good snack shack and poor caddying","Bushwood.jpg","18Hole"),
                new GolfCourse("Fury Creek Golf CC", 2, "Price is wrong B&$#%","FurryCreek.jpg","PuttPutt"),
                new GolfCourse("Cotton Wood", 3, "Waggle and let the big dog eat","Cottonwood.jpg","9Hole"),
                new GolfCourse("Little Met",4,"Great course for beginners, not so much for the advanced player","golfcouse5.jpg","Par3")
+
                );
 
             modelbuilder.Entity<Review>().HasData(
