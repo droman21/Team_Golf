@@ -45,8 +45,6 @@ namespace Team_Golf.Controllers
             return View(golfCourse);
         }
 
-
-
     }
 }
 

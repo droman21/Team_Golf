@@ -66,5 +66,19 @@ namespace Team_Golf.Controllers
             return RedirectToAction("Details", "Course", new { id = golfCourseID });
             //return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Review review = reviewRepo.GetById(id);
+            return View(review);
+        }
+        [HttpPost]
+        public ActionResult Update(Review review)
+        {
+            int golfCourseID = review.GolfCourseId;
+            reviewRepo.Update(review);
+            return RedirectToAction("Details", "Course", new { id = golfCourseID });
+        }
+
     }
 }
