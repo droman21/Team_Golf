@@ -60,8 +60,11 @@ namespace Team_Golf.Controllers
         [HttpPost]
         public ActionResult Delete (Review review)
         {
+            int golfCourseID = review.GolfCourseId;
             reviewRepo.Delete(review);
-            return RedirectToAction("Details", "Course", new { id = review.GolfCourseId });
+            //return RedirectToAction("Details", "Course", new { id = review.GolfCourseId });
+            return RedirectToAction("Details", "Course", new { id = golfCourseID });
+            //return RedirectToAction("Index");
         }
     }
 }
