@@ -41,5 +41,10 @@ namespace Team_Golf.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public void Update(Review review)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
