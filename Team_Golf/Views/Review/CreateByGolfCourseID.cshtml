@@ -1,23 +1,23 @@
-﻿@model Team_Golf.Models.Review 
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+﻿@model Team_Golf.Models.Review
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    Layout = null;
+    ViewData["Title"] = "CreateByGolfCourseID";
 }
-
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
+    <title>CreateByGolfCourseID</title>
 </head>
 <body>
+<h1>CreateByGolfCourseID</h1>
 
 <h4>Review</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" method="post">
+        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ReviewerName" class="control-label"></label>
@@ -36,16 +36,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="ReviewRating" class="control-label"></label>
-                @*  <input asp-for="ReviewRating" class="form-control" />*@
-                @*  <span asp-validation-for="ReviewRating" class="text-danger"></span>*@
-                @*<select asp-for="InstructorId" class="form-control" asp-items="ViewBag.InstructorId"></select>*@
-            <select asp-for="Id">
-                <option value="1">*</option>
-                <option value="2">**</option>
-                <option value="3">***</option>
-                <option value="4">****</option>
-                <option value="5">*****</option>
-            </select>
+                <input asp-for="ReviewRating" class="form-control" />
+                <span asp-validation-for="ReviewRating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="GolfCourseId" class="control-label"></label>*@
+                <input asp-for="GolfCourseId" class="form-control" asp-items="ViewBag.GolfCourseId" type="hidden"></input>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -57,6 +53,6 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
 </body>
 </html>
+

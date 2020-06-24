@@ -13,6 +13,7 @@ namespace Team_Golf
         public DbSet<GolfCourse> GolfCourses { get; set; }
         public DbSet<Review> Reviews { get; set; }
 
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=GolfCourseDatabase;Trusted_Connection=True;";

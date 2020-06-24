@@ -29,9 +29,6 @@ namespace Team_Golf.Controllers
             var model = golfCourseRepo.GetById(id);
             return View(model);
         }
-        public CourseController()
-        {
-
-        }
+        
     }
 }
