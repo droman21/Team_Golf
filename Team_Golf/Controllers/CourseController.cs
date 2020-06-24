@@ -37,16 +37,14 @@ namespace Team_Golf.Controllers
         [HttpPost]
         public ActionResult Create(GolfCourse golfCourse)
         {
-            golfCourseRepo.Create(golfCourse);
+            if (ModelState.IsValid)
+            {
+                golfCourseRepo.Create(golfCourse);
+                return RedirectToAction("Index");
+            }
             return View(golfCourse);
+        }
 
-        }
-        [HttpGet]
-        public ViewResult CreateByGolfCourseID (int Id)
-        {
-            ViewBag.golfCourseID = Id;
-            return View();
-        }
 
 
     }

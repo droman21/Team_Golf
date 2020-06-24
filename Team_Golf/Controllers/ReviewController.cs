@@ -39,5 +39,15 @@ namespace Team_Golf.Controllers
             reviewRepo.Create(review);
             return View(review);
         }
+
+        [HttpGet]
+        public ViewResult CreateByGolfCourseID(int Id)
+        {
+            //ViewBag.golfCourseID = Id;
+            //ViewBag.Id = Id;
+            ViewBag.GolfCourseID = Id;
+            return View();
+        }
+
     }
 }
