@@ -13,7 +13,7 @@ namespace Team_Golf.tests
         CourseController underTest;
         public CourseControllerTests()
         {
-            underTest = new CourseController();
+            //underTest = new CourseController();
         }
         [Fact]
         public void Index_Returns_View()
