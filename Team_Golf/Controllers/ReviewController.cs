@@ -51,5 +51,17 @@ namespace Team_Golf.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            Review review = reviewRepo.GetById(id);
+            return View(review);
+        }
+        [HttpPost]
+        public ActionResult Delete (Review review)
+        {
+            reviewRepo.Delete(review);
+            return RedirectToAction("Details", "Course", new { id = review.GolfCourseId });
+        }
     }
 }

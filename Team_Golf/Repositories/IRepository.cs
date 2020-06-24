@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Team_Golf.Models;
 
 namespace Team_Golf.Repositories
 {
@@ -10,5 +11,6 @@ namespace Team_Golf.Repositories
         IEnumerable<T> GetAll();
         T GetById(int id);
         void Create(T obj);
+        void Delete(Review review);
     }
 }

@@ -37,7 +37,9 @@ namespace Team_Golf.Repositories
             db.SaveChanges();
         }
 
-        
-        
+        public void Delete(Review review)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
