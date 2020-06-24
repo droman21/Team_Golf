@@ -29,6 +29,26 @@ namespace Team_Golf.Controllers
             var model = golfCourseRepo.GetById(id);
             return View(model);
         }
-        
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(GolfCourse golfCourse)
+        {
+            golfCourseRepo.Create(golfCourse);
+            return View(golfCourse);
+
+        }
+        [HttpGet]
+        public ViewResult CreateByGolfCourseID (int Id)
+        {
+            ViewBag.golfCourseID = Id;
+            return View();
+        }
+
+
     }
 }
+
