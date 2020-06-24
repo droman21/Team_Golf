@@ -36,6 +36,7 @@ namespace Team_Golf.Repositories
             db.GolfCourses.Add(golfcourse);
             db.SaveChanges();
         }
+
         
         
     }

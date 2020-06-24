@@ -15,8 +15,12 @@
     @foreach (var review in Model)
     {
         <p>Reviewer Name: <span>@review.ReviewerName</span></p>
-        <p>Review Test: <span>@review.ReviewText</span></p>
+        <p>Review Text: <span>@review.ReviewText</span></p>
+        <p>Review Date: <span>@review.ReviewDate</span></p>
+        <p>Review Rating: <span><a href="/Review/Details/@review.Id">@review.ReviewRating</a></span></p>
 
     }
+    <a href="/Review/Create">Add New Review</a>
+
 </body>
 </html>
