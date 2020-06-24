@@ -36,15 +36,17 @@ namespace Team_Golf.Controllers
         [HttpPost]
         public ActionResult Create(Review review)
         {
-            reviewRepo.Create(review);
+            if (ModelState.IsValid)
+            {
+                reviewRepo.Create(review);
+                return RedirectToAction("Details", "Course", new { id = review.GolfCourseId });
+            }
             return View(review);
         }
 
         [HttpGet]
         public ViewResult CreateByGolfCourseID(int Id)
         {
-            //ViewBag.golfCourseID = Id;
-            //ViewBag.Id = Id;
             ViewBag.GolfCourseID = Id;
             return View();
         }
