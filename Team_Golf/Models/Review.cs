@@ -8,12 +8,12 @@ namespace Team_Golf.Models
 {
     public class Review
     {
-        [Required]
+        //[Required]
         public string ReviewerName { get; set; }
         public int Id { get; set; }
-        [Required]
+        //[Required]
         public string ReviewText { get; set; }
-        public string ReviewDate { get; set; }
+        public DateTime ReviewDate { get; set; }
         public int ReviewRating { get; set; }
 
         public int GolfCourseId { get; set; }
@@ -23,7 +23,7 @@ namespace Team_Golf.Models
         {
 
         }
-        public Review(string reviewerName, int reviewId, string reviewText, string reviewDate, int reviewRating, int golfCourseId)
+        public Review(string reviewerName, int reviewId, string reviewText, DateTime reviewDate, int reviewRating, int golfCourseId)
         {
             ReviewerName = reviewerName;
             Id = reviewId;
