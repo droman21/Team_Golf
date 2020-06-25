@@ -63,9 +63,7 @@ namespace Team_Golf.Controllers
         {
             int golfCourseID = review.GolfCourseId;
             reviewRepo.Delete(review);
-            //return RedirectToAction("Details", "Course", new { id = review.GolfCourseId });
             return RedirectToAction("Details", "Course", new { id = golfCourseID });
-            //return RedirectToAction("Index");
         }
         [HttpGet]
         public ViewResult Update(int id)
