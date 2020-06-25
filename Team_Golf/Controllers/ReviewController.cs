@@ -38,6 +38,7 @@ namespace Team_Golf.Controllers
         {
             if (ModelState.IsValid)
             {
+                review.ReviewDate = DateTime.Now;
                 reviewRepo.Create(review);
                 return RedirectToAction("Details", "Course", new { id = review.GolfCourseId });
             }
@@ -62,9 +63,7 @@ namespace Team_Golf.Controllers
         {
             int golfCourseID = review.GolfCourseId;
             reviewRepo.Delete(review);
-            //return RedirectToAction("Details", "Course", new { id = review.GolfCourseId });
             return RedirectToAction("Details", "Course", new { id = golfCourseID });
-            //return RedirectToAction("Index");
         }
         [HttpGet]
         public ViewResult Update(int id)
@@ -75,9 +74,14 @@ namespace Team_Golf.Controllers
         [HttpPost]
         public ActionResult Update(Review review)
         {
-            int golfCourseID = review.GolfCourseId;
-            reviewRepo.Update(review);
-            return RedirectToAction("Details", "Course", new { id = golfCourseID });
+            if (ModelState.IsValid)
+            {
+                review.ReviewDate = DateTime.Now;
+                int golfCourseID = review.GolfCourseId;
+                reviewRepo.Update(review);
+                return RedirectToAction("Details", "Course", new { id = golfCourseID });
+            }
+            return View(review);
         }
 
     }
