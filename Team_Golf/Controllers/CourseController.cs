@@ -19,7 +19,6 @@ namespace Team_Golf.Controllers
 
         public ViewResult Index()
         {
-            //GolfCourseRepository golfCourseRepo = new GolfCourseRepository();
             var model = golfCourseRepo.GetAll();
             return View(model);
         }
@@ -44,8 +43,6 @@ namespace Team_Golf.Controllers
             }
             return View(golfCourse);
         }
-
-
 
     }
 }

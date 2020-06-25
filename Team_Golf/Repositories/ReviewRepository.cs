@@ -41,5 +41,10 @@ namespace Team_Golf.Repositories
             db.Reviews.Remove(review);
             db.SaveChanges();
         }
+        public void Update(Review review)
+        {
+            db.Reviews.Update(review);
+            db.SaveChanges();
+        }
     }
 }

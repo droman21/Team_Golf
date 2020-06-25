@@ -1,29 +1,23 @@
 ﻿@model Team_Golf.Models.Review
 @addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    ViewData["Title"] = "CreateByGolfCourseID";
+    ViewData["Title"] = "Update";
 }
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>CreateByGolfCourseID</title>
-</head>
-<body>
-<h1>CreateByGolfCourseID</h1>
+<h1>Update</h1>
 
 <h4>Review</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Update">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ReviewerName" class="control-label"></label>
                 <input asp-for="ReviewerName" class="form-control" />
                 <span asp-validation-for="ReviewerName" class="text-danger"></span>
             </div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="ReviewText" class="control-label"></label>
                 <input asp-for="ReviewText" class="form-control" />
@@ -40,18 +34,16 @@
                 <span asp-validation-for="ReviewRating" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input asp-for="GolfCourseId" class="form-control" value="@ViewBag.GolfCourseId" type="hidden"/>
+                <input type="hidden" asp-for="GolfCourseId" />
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+            <div>
+                <a href="/Review/Details/@Model.Id"> Back to Review Details</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a href="/Course/Details/@ViewBag.GolfCourseId">Return to Course Details</a>
-</div>
-</body>
-</html>
 

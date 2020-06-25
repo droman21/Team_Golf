@@ -12,5 +12,6 @@ namespace Team_Golf.Repositories
         T GetById(int id);
         void Create(T obj);
         void Delete(Review review);
+        void Update(Review review);
     }
 }
