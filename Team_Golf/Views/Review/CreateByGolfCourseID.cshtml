@@ -9,6 +9,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>CreateByGolfCourseID</title>
+    <link href="~/CSS/FormsStyle.css" rel="stylesheet" />
 </head>
 <body>
 <h1>CreateByGolfCourseID</h1>
@@ -17,7 +18,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" class="FormStyle">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ReviewerName" class="control-label"></label>
@@ -45,12 +46,14 @@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+            <div class="FormGroup">
+                <a href="/Course/Details/@ViewBag.GolfCourseId">Return to Course Details</a>
+            </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a href="/Course/Details/@ViewBag.GolfCourseId">Return to Course Details</a>
 </div>
 </body>
 </html>
