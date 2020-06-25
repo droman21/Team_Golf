@@ -6,10 +6,20 @@
 }
 
 #Details_Section {
-    display: grid;
-    color: red;
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 6em;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    border: 2px solid #333;
+    text-align: left;
+    justify-content: center;
+    background-color: lightgray;
+    opacity: 0.7;
+    padding: 1em;
+    margin-left: 380px;
+    margin-right: 380px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 /*#Details_Section article img {
@@ -25,3 +35,5 @@
     border: 2px solid #333;
     padding: 1em;
 }
+
+

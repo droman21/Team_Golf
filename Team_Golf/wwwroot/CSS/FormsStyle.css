@@ -20,3 +20,9 @@
     margin-top: 80px;
     margin-bottom: 20px;
 }
+
+.control-label {
+    opacity: 1;
+    color: black;
+    font-weight: bold;
+}
