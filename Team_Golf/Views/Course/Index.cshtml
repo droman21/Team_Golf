@@ -13,16 +13,18 @@
     <link href="~/CSS/IndexStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>The Best Golf Course Reviews Site</h1>
-    <p>Checkout their reviews below or add your own!</p>
+    <div class="headerinfo">
+        <h1>The Best Golf Course Reviews Site</h1>
+        <p>Checkout their reviews below or add your own!</p>
+    </div>
     <div id="Review_Section">
         @foreach (var golfCourse in Model)
         {
                 <article class="someName">
                     <h3><a href="/Course/Details/@golfCourse.Id">@golfCourse.Name</a></h3>
                     <img src="~/Images/@golfCourse.Image" alt="image# @golfCourse.Id" />
-                  <p>@golfCourse.CourseType</p>  
-                  <p>@golfCourse.Description</p>
+                  <p>Golf Course Type:  @golfCourse.CourseType</p>  
+                  <p>About this Golf Course:  @golfCourse.Description</p>
                 </article>
         }
     </div>

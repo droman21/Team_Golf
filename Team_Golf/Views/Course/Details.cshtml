@@ -13,16 +13,23 @@
 </head>
 
 <body>
+    <div class="headerinfo">
+        <h1> Golf Course Details</h1>
+    </div>
     <div id="Details_Section">
         <article class="some_details_name">
-            <h1> Golf Course Details</h1>
-            <p> Golf Course Name: <span>@Model.Name</span></p>
-            <p> Golf Course Description:<span>@Model.Description</span></p>
+            <h3><span class="CourseName">@Model.Name</span></h3>
+            <p> About this Golf Course: <span>@Model.Description</span></p>
             <p> Golf Course Type: <span>@Model.CourseType</span></p>
+            <hr />
+            <hr />
             @foreach (var review in Model.Reviews)
             {
+                <p>Reviewer Name: <span>@review.ReviewerName</span></p>
                 <p>Review: <span><a href="/Review/Details/@review.Id">@review.ReviewText</a></span></p>
-                <p>ReviewName: <span>@review.ReviewerName</span></p>
+                <p>Review Rating: <span>@review.ReviewRating</span></p>
+                <p>Review Date: <span>@review.ReviewDate</span></p>
+                <hr />
             }
             <hr />
             <p><a href="/Review/CreateByGolfCourseId/@Model.Id">Add New Review</a></p>

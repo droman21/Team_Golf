@@ -14,11 +14,16 @@ p {
 
 #Review_Section {
     display: grid;
-    color: red;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 1em;
+    margin-left: 100px;
+    margin-right: 100px;
   
+}
+
+.headerinfo {
+    text-align: center;
 }
 #Review_Section article img {
     width: 100%;

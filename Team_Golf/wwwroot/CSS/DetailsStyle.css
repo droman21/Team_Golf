@@ -5,6 +5,10 @@
     background-size: cover;
 }
 
+.headerinfo {
+    text-align: center;
+}
+
 #Details_Section {
     display: flex;
     color: black;
@@ -20,6 +24,10 @@
     margin-top: 80px;
     margin-bottom: 20px;
     font-weight: bold;
+}
+
+.CourseName {
+    color: red;
 }
 
 /*#Details_Section article img {
